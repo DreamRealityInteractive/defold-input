@@ -249,7 +249,7 @@ function M.create(settings)
 				if #action.touch == 2 then
 					local t1 = action.touch[1]
 					local t2 = action.touch[2]
-					if current_touch_count < 2 then
+					if current_touch_count ~= 2 then
 						multi_states[t1.id] = create_touch_state()
 						multi_states[t2.id] = create_touch_state()
 						t1.pressed = true
